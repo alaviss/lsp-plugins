@@ -687,6 +687,8 @@ namespace lsp
                 uint32_t type           = -1;
 
                 const char *path        = reinterpret_cast<const char *>(pExt->retrieve_value(urid, &type, &count));
+                lsp_trace("value type=%d (%s), count=%d", type, pExt->unmap_urid(type), int(count));
+
                 char *mapped            = NULL;
                 if (path != NULL)
                 {
@@ -714,7 +716,7 @@ namespace lsp
                     path        = tmp_path;
 
                     // We need to translate relative path to absolute path?
-                    if ((pExt->mapPath != NULL) && (::strstr(path, LSP_BUILTIN_PREFIX) != path))
+                    if ((pExt->mapPath != NULL) && (type != pExt->forge.URID) && (::strstr(path, LSP_BUILTIN_PREFIX) != path))
                     {
                         mapped = pExt->mapPath->absolute_path(pExt->mapPath->handle, path);
                         if (mapped != NULL)
