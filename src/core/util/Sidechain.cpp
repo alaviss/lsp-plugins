@@ -73,7 +73,8 @@ namespace lsp
 
     void Sidechain::update_settings()
     {
-        nReactivity         = millis_to_samples(nSampleRate, fReactivity);
+        ssize_t react       = millis_to_samples(nSampleRate, fReactivity);
+        nReactivity         = (react > 1) ? react : 1;
         fTau                = 1.0f - expf(logf(1.0f - M_SQRT1_2) / (nReactivity)); // Tau is based on seconds
         nRefresh            = REFRESH_RATE; // Force the function to be refreshed
     }
