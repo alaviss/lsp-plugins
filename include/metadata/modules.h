@@ -156,7 +156,7 @@ MOD_PLUGIN(sc_mb_expander_stereo, plugin_ui)
 MOD_PLUGIN(sc_mb_expander_lr, plugin_ui)
 MOD_PLUGIN(sc_mb_expander_ms, plugin_ui)
 
-// Multiband expanders
+// Multiband gates
 MOD_PLUGIN(mb_gate_mono, plugin_ui)
 MOD_PLUGIN(mb_gate_stereo, plugin_ui)
 MOD_PLUGIN(mb_gate_lr, plugin_ui)
@@ -165,6 +165,10 @@ MOD_PLUGIN(sc_mb_gate_mono, plugin_ui)
 MOD_PLUGIN(sc_mb_gate_stereo, plugin_ui)
 MOD_PLUGIN(sc_mb_gate_lr, plugin_ui)
 MOD_PLUGIN(sc_mb_gate_ms, plugin_ui)
+
+// Pop destroyer
+MOD_PLUGIN(pop_destroyer_mono, plugin_ui)
+MOD_PLUGIN(pop_destroyer_stereo, plugin_ui)
 
 #ifndef LSP_NO_EXPERIMENTAL
     // Nonlinear Convolver
