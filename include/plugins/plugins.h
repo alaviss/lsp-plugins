@@ -34,6 +34,7 @@
 #include <plugins/room_builder.h>
 #include <plugins/mb_expander.h>
 #include <plugins/mb_gate.h>
+#include <plugins/pop_destroyer.h>
 
 #include <plugins/nonlinear_convolver.h>
 
